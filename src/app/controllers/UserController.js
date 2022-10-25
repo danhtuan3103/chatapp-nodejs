@@ -1,6 +1,6 @@
 const { User } = require('../models');
 var jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const uniqid = require('uniqid');
 class UserController {
     // [GET] /home
