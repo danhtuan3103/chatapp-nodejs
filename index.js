@@ -15,7 +15,7 @@ db.connect();
 dotenv.config();
 const io = socketIo(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'https://chatapp0001.netlify.app',
     },
 });
 app.use(cors());
