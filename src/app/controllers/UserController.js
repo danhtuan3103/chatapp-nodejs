@@ -24,6 +24,8 @@ class UserController {
                     name: request.body.name,
                     email: request.body.email,
                     password: hashedPassword,
+                    avatar: '',
+                    gender: '',
                 });
 
                 console.log(user);
@@ -96,6 +98,8 @@ class UserController {
                             email: user.email,
                             user_id: user.user_id,
                             token,
+                            avatar: user.avatar,
+                            gender: user.gender,
                         });
                     })
                     // catch error if password does not match
