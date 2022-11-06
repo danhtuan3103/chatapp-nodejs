@@ -23,8 +23,8 @@ class UserController {
                     user_id: uniqid(),
                     name: request.body.name,
                     email: request.body.email,
+                    avatar: request.body.avatar,
                     password: hashedPassword,
-                    avatar: '',
                     gender: '',
                 });
 
