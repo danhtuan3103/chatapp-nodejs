@@ -16,14 +16,13 @@ db.connect();
 dotenv.config();
 const io = socketIo(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: process.env.REACT_APP_BASE_URL,
     },
 });
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 route(app);
-
 const getVisitor = async () => {
     const socket = (await io.fetchSockets()).map((socket) => socket.user);
 
